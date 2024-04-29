@@ -143,14 +143,17 @@ table {
 
     width: 1020px;
     height: auto;
-    /* background-color: green; */
     margin: 0 auto;
 }
 
 #warp .movie {
     width: 960px;
     margin: 0 auto;
-    /* background-color: rgb(242, 240, 255); */
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 /* top */
@@ -165,7 +168,6 @@ table {
 .search {
     width: 500px;
     margin: 30px auto 60px auto;
-    /* background-color: green; */
     position: relative;
     text-align: center;
 }
@@ -209,8 +211,8 @@ ul.movie-list li.movie-item {
     background-color: rgb(240, 240, 240);
 }
 
-ul.movie-list li.movie-item:nth-child(3n){
-    margin-right:0;
+ul.movie-list li.movie-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 ul.movie-list li.movie-item .movie-image-box,
@@ -234,4 +236,76 @@ ul.movie-list li.movie-item .movie-text {
 
 ul.movie-list li.movie-item .movie-text {
     line-height: 1.26;
+}
+
+/* 반응형 */
+@media only screen and (max-width: 1068px) {
+    #warp {
+        width: 700px;
+    }
+
+    #warp .movie {
+        width: 680px;
+    }
+
+    ul.movie-list {
+        width: 628px
+    }
+
+    ul.movie-list li.movie-item:nth-child(2n),
+    ul.movie-list li.movie-item:nth-child(2n):nth-child(3n) {
+        margin-right: 0;
+    }
+
+    ul.movie-list li.movie-item:nth-child(3n) {
+        margin-right: 36px;
+    }
+
+}
+
+@media only screen and (max-width: 734px) {
+    #warp {
+        width: 100%;
+    }
+
+    #warp .movie {
+        width: 90%;
+    }
+
+    .search {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .search input {
+        width: 90%;
+    }
+
+    .search button {
+        right: 10px;
+    }
+
+    ul.movie-list {
+        width: 310px;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    ul.movie-list li.movie-item {
+        margin: 0 auto 30px auto
+    }
+
+    ul.movie-list li.movie-item:nth-child(2n),
+    ul.movie-list li.movie-item:nth-child(2n):nth-child(3n) {
+        margin-right: 0;
+    }
+
+    ul.movie-list li.movie-item:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .top {
+        font-size: 18px;
+        padding: 20px;
+    }
 }
