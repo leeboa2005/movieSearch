@@ -108,3 +108,7 @@ header {
     width: 280px;
   }
 }
+
+.no-msg {
+  display: none;
+}
