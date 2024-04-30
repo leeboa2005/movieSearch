@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>영화 검색사이트</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/8eb5905426.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8eb5905426.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/movie.js"></script>
+    <script type="module" src="./src/search.js"></script>
+  </head>
 
-<body>
-
+  <body>
     <div id="warp">
-        <header>
-            <nav class="top">
-                <h1><a href="#">인기 영화 검색하기 페이지</a></h1>
-            </nav>
-            <form class="search" onsubmit="">
-                <input type="text" id="search-input" placeholder="영화 제목을 검색해 보세요" autoFocus />
-                <button type="submit" id="search-btn"> <i class="fas fa-search"></i></button>
-            </form>
-        </header>
-        <section class="movie">
-            <!-- 영화 리스트 출력 -->
-            <ul class="movie-list">
-            </ul>
-
-
-        </section>
+      <!-- header -->
+      <header>
+        <nav class="top">
+          <h1><a href="#">인기 영화 검색하기</a></h1>
+        </nav>
+        <!-- search -->
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="영화 제목을 검색해 보세요"
+          />
+          <button type="submit" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </header>
+      <!--  section -->
+      <section class="movie">
+        <!-- movie list  -->
+        <ul id="movie-list"></ul>
+      </section>
     </div>
-</body>
-<script defer src="js/search.js"></script>
-
+  </body>
 </html>
